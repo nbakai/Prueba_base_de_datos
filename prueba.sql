@@ -23,5 +23,62 @@ INT NOT NULL, FOREIGN KEY(producto_id)
 REFERENCES producto(id), FOREIGN KEY
 (factura_id) REFERENCES factura(numero_factura));
 
+INSERT INTO cliente(nombre, rut, direccion) VALUES('
+Alan Array', 120987654, 'Av. España 01');
+
+INSERT INTO cliente(nombre, rut, direccion) VALUES('
+Bulma Brown', 159872341, 'Av. Bulnes 01');
+
+INSERT INTO cliente(nombre, rut, direccion) VALUES('
+Edward Elric', 199801702, 'Francia 10');
+
+INSERT INTO cliente(nombre, rut, direccion) VALUES('
+Winry Rockbell', 200010098, 'Francia 20');
+
+INSERT INTO cliente(nombre, rut, direccion) VALUES('
+Alphonse Elric', 220100115, 'Francia 10');
+
+
+INSERT INTO categoria(nombre,descripcion) VALUES
+('pan', 'todo tipo de panes');
+
+INSERT INTO categoria(nombre,descripcion) VALUES
+('dulces', 'todo tipo de dulces para la once');
+
+INSERT INTO categoria(nombre,descripcion) VALUES
+('salado', 'comidas saladas para la once');
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES('pan_amasado', 'pancito recién hecho', 800, 1);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'marraqueta', 'epecial para la once', 500, 1);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Queque', 'con almendras', 600, 2);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Pastel_de_yoghurt', 'pastel con sabor a frambueza', 3500, 2);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Galletas', 'galletas surtidas', 1500, 2);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Pizza', 'pizza jamon queso', 1000, 3);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Empanada', 'empanada de pino', 1200, 3);
+
+INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
+VALUES(
+'Sandwich', 'lechuga pollo tomate', 1800, 3);
+
+
 
 
