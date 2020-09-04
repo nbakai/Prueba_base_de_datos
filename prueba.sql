@@ -79,6 +79,25 @@ INSERT INTO producto(nombre,descripcion,valor_unitario,categoria_id)
 VALUES(
 'Sandwich', 'lechuga pollo tomate', 1800, 3);
 
+----------------------------------------------------
+
+INSERT INTO factura(cliente_id, fecha_factura, subtotal, iva,
+precio_total) VALUES(
+1, '2020-03-28', 0, 0, 0);
+
+ INSERT INTO listado_productos(producto_id,
+cantidad,valor_total_producto,factura_id) VALUES(
+2, 1, 800, 1);
+
+INSERT INTO listado_productos(producto_id,
+cantidad,valor_total_producto,factura_id) VALUES(
+3, 1, 600, 1);
+
+UPDATE factura SET subtotal=1400,precio_total=
+1666 WHERE numero_factura=1;
+
+
+
 
 
 
