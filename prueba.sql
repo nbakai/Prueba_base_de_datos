@@ -82,8 +82,7 @@ VALUES(
 ----------------------------------------------------
 
 INSERT INTO factura(cliente_id, fecha_factura, subtotal, iva,
-precio_total) VALUES(
-1, '2020-03-28', 0, 0, 0);
+precio_total) VALUES (1, '2020-03-28', 0, 0, 0);
 
  INSERT INTO listado_productos(producto_id,
 cantidad,valor_total_producto,factura_id) VALUES(
@@ -94,7 +93,69 @@ cantidad,valor_total_producto,factura_id) VALUES(
 3, 1, 600, 1);
 
 UPDATE factura SET subtotal=1400,precio_total=
-1666 WHERE numero_factura=1;
+1666, iva=266 WHERE numero_factura=1;
+
+INSERT INTO factura(cliente_id, fecha_factura, subtotal, iva,
+precio_total) VALUES (1, '2020-03-29', 0, 0, 0),
+(2, '2020-04-01', 0, 0, 0),
+(2, '2020-04-02',0,0,0),
+(2, '2020-04-03',0,0,0),
+(3, '2020-04-04',0,0,0),
+(4, '2020-04-05',0,0,0),
+(4, '2020-04-06',0,0,0),
+(4, '2020-04-07',0,0,0),
+(4, '2020-04-08',0,0,0);
+
+INSERT INTO listado_productos(producto_id,
+cantidad, valor_total_producto, factura_id)
+VALUES 
+(7, 3, 3600,2),
+(6, 3, 3000, 3), 
+(7, 1, 1200, 4), 
+(8, 1, 1800, 4), 
+(2, 3, 1500, 5), 
+(6, 1, 1000, 6), 
+(5, 1, 1500, 7), 
+(2, 1, 500, 7), 
+(1, 1, 800, 8), 
+(3, 1, 600, 8), 
+(5, 1, 1500, 8), 
+(1, 2, 1600, 9), 
+(7, 2, 2400, 9), 
+(4, 1, 3500, 10);
+
+
+ UPDATE factura SET subtotal=3600, precio_total=4284,
+iva=685 WHERE numero_factura=2;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=3000, precio_total=3570,
+iva=570 WHERE numero_factura=3;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=3000, precio_total=3570,
+iva=570 WHERE numero_factura=4;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=1500, precio_total=1785,
+iva=285 WHERE numero_factura=5;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=1000, precio_total=1190,
+iva=190 WHERE numero_factura=6;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=1000, precio_total=2380,
+iva=380 WHERE numero_factura=7;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=2900, precio_total=3451,
+iva=551 WHERE numero_factura=8;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=4000, precio_total=4760,
+iva=760 WHERE numero_factura=9;
+UPDATE 1
+prueba=# UPDATE factura SET subtotal=3500, precio_total=4165,
+iva=665 WHERE numero_factura=10;
+UPDATE 1
+
+
+------------------------------------
+
 
 
 
