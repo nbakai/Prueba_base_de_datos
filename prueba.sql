@@ -1,0 +1,4 @@
+psql
+CREATE DATABASE prueba;
+\c prueba
+CREATE TABLE cliente(id SERIAL PRIMARY KEY, nombre VARCHAR(60), rut VARCHAR(20) UNIQUE NOT NULL, direccion VARCHAR(100));
