@@ -1,3 +1,5 @@
+--Parte 2: Creando el modelo en la base de datos
+
 psql
 CREATE DATABASE prueba;
 \c prueba
@@ -127,46 +129,47 @@ VALUES
 
 UPDATE factura SET subtotal=3600, precio_total=4284,
 iva=685 WHERE numero_factura=2;
-UPDATE 1
+
 UPDATE factura SET subtotal=3000, precio_total=3570,
 iva=570 WHERE numero_factura=3;
-UPDATE 1
+
 UPDATE factura SET subtotal=3000, precio_total=3570,
 iva=570 WHERE numero_factura=4;
-UPDATE 1
+
 UPDATE factura SET subtotal=1500, precio_total=1785,
 iva=285 WHERE numero_factura=5;
-UPDATE 1
+
 UPDATE factura SET subtotal=1000, precio_total=1190,
 iva=190 WHERE numero_factura=6;
-UPDATE 1
+
 UPDATE factura SET subtotal=1000, precio_total=2380,
 iva=380 WHERE numero_factura=7;
-UPDATE 1
+
 UPDATE factura SET subtotal=2900, precio_total=3451,
 iva=551 WHERE numero_factura=8;
-UPDATE 1
+
 UPDATE factura SET subtotal=4000, precio_total=4760,
 iva=760 WHERE numero_factura=9;
-UPDATE 1
+
 UPDATE factura SET subtotal=3500, precio_total=4165,
 iva=665 WHERE numero_factura=10;
-UPDATE 1
 
 
-------------------------------------
+
+-------¿Que cliente realizó la compra más cara?---------------------------
 
 SELECT nombre FROM cliente JOIN factura ON cliente.id=factura.cliente_id 
 ORDER BY(precio_total) DESC LIMIT(1);
 
 
 
--------------------------------------
+------------¿Que cliente pagó sobre 100 de monto?-------------------------
 
 SELECT nombre FROM cliente JOIN factura ON cliente.id=factura.cliente_id 
 WHERE precio_total > 100 GROUP BY(nombre);
 
--------------------------------------------
+
+-----------¿Cuantos clientes han comprado el producto 6.------------------
 
 
 SELECT COUNT(nombre) AS clientes FROM cliente JOIN factura ON 
